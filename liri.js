@@ -22,13 +22,21 @@ var Twitter = require('twitter');
 // We will then create a switch-case statement (if-then would also work).
 // The switch-case will direct which function gets run.
 switch (action) {
-  case "my-tweets":
+    case "my-tweets":
     tweets();
     break;
 
-  case "spotify-this-song":
-  spotify();
+    case "spotify-this-song":
+    spotify();
     break;
+
+    case "movie-this":
+    movie();
+    break;
+    
+    case "do-what-it-says":
+    doIt();
+    break;        
 }
 
 // https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html
@@ -81,94 +89,33 @@ function spotify() {
         
         // returning album that the song is from
         console.log(data.tracks.items[0].album.name);        
-            });
+        });
     };
 
+function movie() {
 
-    
-    //  FIRST TRY -----
-    
-    // request("https://api.twitter.com/1.1/search/tweets.json?q=" +value, 
-    // function (error, response, body) {
+    // var omdb = require('omdb');
+ 
+    var request = require('request');
+    request('http://www.omdbapi.com/?apikey=trilogy&plot=full&tomatoes=true&r=json&t='+ value, function (error, response, body) {
+    //   console.log('error:', error); // Print the error if one occurred
+    //   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
 
-    //    const obj = JSON.parse(body);
-    // //    const year = +obj.Year;
+    const obj = JSON.parse(body);
 
-    //     // console.log(body);
-    //     // console.log(obj.Title);
-    //     console.log(obj);
-        
+    console.log(obj.Title);
+    console.log(obj.Year);
+    console.log(obj.imdbRating);
+    console.log(obj.tomatoRating);
+    console.log(obj.Country);
+    console.log(obj.Language);
+    console.log(obj.Plot);
+    console.log(obj.Actors);
+ 
+    });
+ 
+    if(!movie) {
+        return console.log('Movie not found!');
+    }
+};
 
-        // SECOND TRY  -----
-
-        // if (userYear > year) {
-        //     console.log("Before my time doggie")
-        // } else {
-        //     console.log("old af");
-        // }
-        
-
-
-// });
-
-//   // We will read the existing bank file
-//   fs.readFile("bank.txt", "utf8", function(err, data) {
-//     if (err) {
-//       return console.log(err);
-//     }
-
-//     // Break down all the numbers inside
-//     data = data.split(", ");
-//     var result = 0;
-
-//     // Loop through those numbers and add them together to get a sum.
-//     for (var i = 0; i < data.length; i++) {
-//       if (parseFloat(data[i])) {
-//         result += parseFloat(data[i]);
-//       }
-//     }
-
-//     // We will then print the final balance rounded to two decimal places.
-//     console.log("You have a total of " + result.toFixed(2));
-//   });
-// }
-
-// // If the "Deposit" function is called...
-// function deposit() {
-
-//   // We will add the value to the bank file.
-//   fs.appendFile("bank.txt", ", " + value, function(err) {
-//     if (err) {
-//       return console.log(err);
-//     }
-//   });
-
-//   // We will then print the value that was added (but we wont print the total).
-//   console.log("Deposited " + value + ".");
-// }
-
-// // If the "Withdraw" function is called
-// function withdraw() {
-
-//   // We will add a negative value to the bank file.
-//   fs.appendFile("bank.txt", ", -" + value, function(err) {
-//     if (err) {
-//       return console.log(err);
-//     }
-//   });
-
-//   // We will then print the value that was subtracted (but we wont print the total).
-//   console.log("Withdrew " + value + ".");
-// }
-
-
-
-//     // And tell the user the amount was added.
-//     console.log("Congrats you won the lottery!");
-
-//   // Otherwise we will tell them they lost 25 cents.
-//   }
-//   else {
-//     console.log("Sorry. You just lost 25 cents. Maybe you should get a job instead.");
-//   }
-// }
