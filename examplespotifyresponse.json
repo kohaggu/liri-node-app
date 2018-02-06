@@ -1,0 +1,74 @@
+{
+  "tracks" : {
+    "href" : "https://api.spotify.com/v1/search?query=eminem&offset=0&limit=1&type=track",
+    "items" : [ {
+      "album" : {
+        "album_type" : "album",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/1ftvBBcu7jYIvXyt3JWB8S"
+        },
+        "href" : "https://api.spotify.com/v1/albums/1ftvBBcu7jYIvXyt3JWB8S",
+        "id" : "1ftvBBcu7jYIvXyt3JWB8S",
+        "images" : [ {
+          "height" : 634,
+          "url" : "https://i.scdn.co/image/1f881110ff752c80069da0308b1de30196d4f8a1",
+          "width" : 640
+        }, {
+          "height" : 297,
+          "url" : "https://i.scdn.co/image/27ddbc71dfd14217a9af2afee16d13dcca72cf4b",
+          "width" : 300
+        }, {
+          "height" : 63,
+          "url" : "https://i.scdn.co/image/1e9727f73a9f80faa9b02857f84c161e4b7c6835",
+          "width" : 64
+        } ],
+        "name" : "The Eminem Show",
+        "type" : "album",
+        "uri" : "spotify:album:1ftvBBcu7jYIvXyt3JWB8S"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7dGJo4pcD2V6oG8kP0tJRR",
+        "id" : "7dGJo4pcD2V6oG8kP0tJRR",
+        "name" : "Eminem",
+        "type" : "artist",
+        "uri" : "spotify:artist:7dGJo4pcD2V6oG8kP0tJRR"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/1Oa0bMld0A3u5OTYfMzp5h"
+        },
+        "href" : "https://api.spotify.com/v1/artists/1Oa0bMld0A3u5OTYfMzp5h",
+        "id" : "1Oa0bMld0A3u5OTYfMzp5h",
+        "name" : "Nate Dogg",
+        "type" : "artist",
+        "uri" : "spotify:artist:1Oa0bMld0A3u5OTYfMzp5h"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 297893,
+      "explicit" : true,
+      "external_ids" : {
+        "isrc" : "USIR10211066"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/6yr8GiTHWvFfi4o6Q5ebdT"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/6yr8GiTHWvFfi4o6Q5ebdT",
+      "id" : "6yr8GiTHWvFfi4o6Q5ebdT",
+      "name" : "'Till I Collapse",
+      "popularity" : 79,
+      "preview_url" : "https://p.scdn.co/mp3-preview/42fa6e912ef113dcd8d125abf08270fb5fea41af",
+      "track_number" : 18,
+      "type" : "track",
+      "uri" : "spotify:track:6yr8GiTHWvFfi4o6Q5ebdT"
+    } ],
+    "limit" : 1,
+    "next" : "https://api.spotify.com/v1/search?query=eminem&offset=1&limit=1&type=track",
+    "offset" : 0,
+    "previous" : null,
+    "total" : 5397
+  }
+}
